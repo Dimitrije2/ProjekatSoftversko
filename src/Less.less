@@ -1,0 +1,180 @@
+
+@darkgray: lightgray; 
+@blue:blue;
+@size:20px;
+@center:center;
+
+
+.centered {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+#sadr(){
+    text-align:center;
+    color:black;
+    font-size:@size;
+}
+
+#poz(){
+    text-align:@center;
+    font-size:50px;
+    margin-top:30px;
+}
+
+#three(){
+  width:80%;
+  text-align:center;
+  margin:20px auto;
+  font-size:20px;
+}
+
+body{
+    background-color:darkgray;
+    margin:0px;
+}
+
+
+ul{
+    display:flex;
+    background-color:@darkgray; 
+    height:100px;
+    justify-content: right;
+    margin-top:0px;
+    li{
+        text-decoration:none;
+        color:white;
+        font-size:30px;
+        padding-right: 0.5em;
+        list-style-type: none;
+        margin:20px;
+
+        a {
+            color:@blue;
+            text-decoration:none;
+            padding-right:0.5em;
+
+            &:hover{
+                font-style: italic;
+            }
+        }
+    }
+}
+
+h1{
+    text-align:center;
+}
+
+#sadrzaj{
+    #sadr
+}
+// slika u home
+.slika-div {
+    width: 100%;               
+    height: 650px;            
+    background-image: url('images/sayan.jpg');
+    background-size: cover;    
+    background-position: center; 
+    margin-top: 20px;          
+}
+
+#sakrij{
+    display:none;
+}
+
+#pozdrav{
+    #poz
+}
+
+// slike u galeriji
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 kolone */
+    gap: 10px; /* Razmak između slika */
+    margin-top: 20px; /* Razmak između galerije i sadržaja iznad */
+}
+
+.gallery-item {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prilagođava sliku unutar diva */
+    border-radius: 8px; /* Opciono: zaobljeni uglovi */
+}
+// kraj galerije
+
+form{
+    text-align:center;
+    margin-top:50px;
+
+    input{
+        margin-top:20px;
+        height:50px;
+        width:370px;
+       border-radius:10px; 
+   }
+
+   button{
+    margin-top:10px;
+    width:80px;
+   }
+}
+
+#about{
+    #three
+}
+
+#treninzi{
+    text-align:center;
+    margin:30px;
+    color:red;
+  }
+  
+
+@media screen and (max-width: 600px) {
+    nav {
+      padding: 10px;
+    }
+    nav ul {
+      flex-direction: column;
+      height:200px;
+    }
+    nav ul li {
+      font-size:20px;
+      margin-bottom: 10px;
+    }
+  
+    nav ul li:hover{text-decoration: underline;}
+
+    h1{
+        font-size:30px;
+    }
+
+    p{
+        font-size:20px;
+    }
+  }
+  
+  // contact h5
+  h5{
+    text-align:center;
+  }
+
+
+
+
+  //ovaj div je prebacen od preko  <div id = "pozdrav"></div>
+
+  // KOD BAZE
+  /*
+  CREATE TABLE klijent (
+    jmbg CHAR(13) NOT NULL PRIMARY KEY,
+    ime VARCHAR(50) NOT NULL,
+    prezime VARCHAR(50) NOT NULL,
+    godine INT NOT NULL,
+    pol ENUM('M', 'Z') NOT NULL
+);
+*/
